@@ -181,7 +181,9 @@ graph TD
 
 ## User Interface (UI)
 
-![Trends Metrics UI](https://github.com/philips-internal/synergy-base/blob/trends/cg-minions/implenent-datamodel-for-all-numericmetrics-ui/apps/trends/tools/trends-metrics-ui/assets/images/TrendsUI.png)
+![Trends Metrics UI](https://github.com/YashzAlphaGeek/TrendsUI/blob/master/assets/images/TrendsUI.png)
+
+
 
 ## API Endpoints
 
