@@ -1,0 +1,170 @@
+/* General Body Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+/* Charts Section */
+.charts-container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.chart-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+    background-color: #f7f8fa;
+}
+
+/* VMD Information Section */
+.vmd-info {
+    width: 80%;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4caf50; 
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* VMD Cards */
+.vmd-cards-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.vmd-card {
+    width: 250px;
+    background-color: #e1f5fe; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    transition: all 0.3s ease-in-out;
+}
+
+.vmd-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.vmd-card h3 {
+    font-size: 18px;
+    color: #00796b; 
+    margin: 0;
+}
+
+/* Status Styling */
+.status {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #4caf50; 
+}
+
+.status.stopped {
+    color: #f44336; 
+}
+
+.vmd-uuid-box {
+    background-color: #00796b; 
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Legend Section */
+.legend-container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.legend-box:hover {
+    transform: scale(1.1);
+}
+
+#timeDuration {
+    margin-top: 20px; 
+    font-size: 18px;
+    color: #333;
+}
+
+#timeDuration p {
+    font-weight: bold;
+}
+
+#durationValue {
+    font-size: 20px;
+    font-weight: normal;
+    color: #007bff; 
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .charts-container {
+        width: 100%;
+    }
+
+    .vmd-info {
+        width: 100%;
+    }
+
+    .vmd-cards-container {
+        gap: 10px;
+    }
+
+    .vmd-card {
+        width: 200px;
+    }
+}

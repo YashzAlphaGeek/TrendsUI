@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trends Metrics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="charts-container">
+        <h1>Trends Metrics</h1>
+        <div class="chart-container">
+            <canvas id="combinedChart"></canvas>
+        </div>
+    </div>
+
+    <div id="timeDuration" style="margin-top: 20px; font-size: 18px; color: #333;">
+        <p>Time Duration: <span id="durationValue">Loading...</span></p>
+    </div>
+
+    <div class="legend-container" id="legendContainer"></div>
+
+    <div class="vmd-info">
+        <div class="vmd-header">
+            <h2>VMD Information</h2>
+            <p id="runningVmdCount" class="vmd-count"></p>
+        </div>
+        <div class="vmd-cards-container" id="vmdList"></div>
+    </div>
+
+    <script type="module">
+        import { initializeCharts } from './static/js/chart.js';
+        import { fetchGraphData } from './static/js/data-fetch.js';
+
+        initializeCharts();
+        setInterval(fetchGraphData, 1000);
+    </script>
+</body>
+</html>
